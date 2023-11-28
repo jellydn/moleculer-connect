@@ -1,0 +1,60 @@
+{
+  "name": "moleculer-connect",
+  "version": "0.0.1",
+  "description": "Moleculer connect from CLI",
+  "keywords": [
+    "cli",
+    "moleculer",
+    "microservices"
+  ],
+  "homepage": "https://github.com/jellydn/moleculer-connect#readme",
+  "bugs": {
+    "url": "https://github.com/jellydn/moleculer-connect/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jelydn/moleculer-connect.git"
+  },
+  "license": "MIT",
+  "author": "Dung Huynh Duc<dung@productsway.com>",
+  "type": "module",
+  "bin": {
+    "moleculer": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "npx tsx ./src/cli.ts",
+    "format": "biome format **/*.ts",
+    "postinstall": "npx husky install",
+    "lint": "biome lint --apply **/*.ts"
+  },
+  "nano-staged": {
+    "*.{js,ts}": "biome format",
+    "*.js": "biome lint"
+  },
+  "dependencies": {
+    "glob": "^10.3.10",
+    "lodash": "^4.17.21",
+    "moleculer": "^0.14.32",
+    "moleculer-repl": "0.6.6",
+    "nats": "^2.18.0",
+    "pino": "^8.16.2",
+    "rimraf": "^5.0.5",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.0",
+    "@types/node": "^20.10.0",
+    "@types/yargs": "^17.0.32",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.0",
+    "typescript": "^5.3.2"
+  },
+  "packageManager": "pnpm@8.11.0"
+}
