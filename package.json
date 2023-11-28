@@ -1,6 +1,6 @@
 {
   "name": "moleculer-connect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Moleculer connect from CLI",
   "keywords": [
     "cli",
@@ -29,7 +29,7 @@
     "build": "tsup",
     "dev": "npx tsx ./src/cli.ts",
     "format": "biome format **/*.ts",
-    "postinstall": "npx husky install",
+    "install-husky": "npx husky install",
     "lint": "biome lint --apply **/*.ts"
   },
   "nano-staged": {
