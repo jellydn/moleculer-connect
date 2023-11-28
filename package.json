@@ -1,6 +1,6 @@
 {
   "name": "moleculer-connect",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Moleculer connect from CLI",
   "keywords": [
     "cli",
@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jelydn/moleculer-connect.git"
+    "url": "git+https://github.com/jellydn/moleculer-connect.git"
   },
   "license": "MIT",
   "author": "Dung Huynh Duc<dung@productsway.com>",
   "type": "module",
   "bin": {
-    "moleculer": "dist/cli.js"
+    "moleculer-connect": "dist/cli.js"
   },
   "files": [
     "dist",

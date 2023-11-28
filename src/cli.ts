@@ -8,14 +8,14 @@ import pkg from "../package.json";
 import connectCommand from "./connect";
 import { logger } from "./logger";
 
-logger.info(`Moleculer Connect CLI v${pkg.version}`);
+logger.info(`Moleculer-Connect CLI v${pkg.version}`);
 
 yargs(hideBin(process.argv))
 	.command(
-		connectCommand.command,
+		"$0",
 		connectCommand.describe,
 		connectCommand.builder,
-		connectCommand.handler,
+		connectCommand.handler
 	)
 	.demandCommand(1)
 	.help().argv;
