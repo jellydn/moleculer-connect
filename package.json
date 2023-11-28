@@ -29,7 +29,7 @@
     "build": "tsup",
     "dev": "npx tsx ./src/cli.ts",
     "format": "biome format **/*.ts",
-    "postinstall": "npx husky install",
+    "install-husky": "npx husky install",
     "lint": "biome lint --apply **/*.ts"
   },
   "nano-staged": {
