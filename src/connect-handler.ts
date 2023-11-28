@@ -49,7 +49,7 @@ export default async function handler(opts) {
 
 	const configFile = process.env.MOLECULER_CONFIG || opts.config;
 	/** @type {import("moleculer").BrokerOptions} Service Broker config file*/
-	const config = (configFile ? loadConfigFile(configFile) : null) || {};
+	const config = (configFile ? await loadConfigFile(configFile) : null) || {};
 
 	if (config.logger === undefined) config.logger = true;
 
@@ -88,32 +88,50 @@ export default async function handler(opts) {
 }
 
 /**
- * Load configuration file
- *
+ * Resolve file path, either absolute or relative to the current working directory.
  */
-function loadConfigFile(configFile: string) {
-	const filePath = path.isAbsolute(configFile)
+function resolveFilePath(configFile: string): string {
+	return path.isAbsolute(configFile)
 		? configFile
 		: path.resolve(process.cwd(), configFile);
-	if (filePath) {
-		if (!fs.existsSync(filePath))
-			throw new Error(`Config file not found: ${filePath}`);
+}
 
-		const ext = path.extname(filePath);
-		switch (ext) {
-			case ".json":
-			case ".ts":
-			case ".js": {
-				logger.info(`Load broker configuration from '${filePath}'...`);
-				const content = require(filePath);
-				if (typeof content === "function") return content.call(this);
-
-				return content.default != null && content.__esModule
-					? content.default
-					: content;
-			}
-			default:
-				throw new Error(`Not supported file extension: ${ext}`);
-		}
+/**
+ * Validate if the file exists and is supported.
+ */
+function validateFile(filePath: string): void {
+	if (!fs.existsSync(filePath)) {
+		throw new Error(`Config file not found: ${filePath}`);
 	}
+
+	const supportedExtensions = [".json", ".ts", ".js"];
+	const ext = path.extname(filePath);
+
+	if (!supportedExtensions.includes(ext)) {
+		throw new Error(`Unsupported file extension: ${ext}`);
+	}
+}
+
+/**
+ * Load and return the configuration from the file.
+ */
+async function loadConfiguration(filePath: string) {
+	const ext = path.extname(filePath);
+	logger.info(`Loading broker configuration from '${filePath}'...`);
+
+	if (ext === ".ts" || ext === ".js") {
+		const importedModule = await import(filePath);
+		return importedModule.default ?? importedModule;
+	} else if (ext === ".json") {
+		return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+	}
+}
+
+/**
+ * Load configuration file
+ */
+export async function loadConfigFile(configFile: string) {
+	const filePath = resolveFilePath(configFile);
+	validateFile(filePath);
+	return loadConfiguration(filePath);
 }
