@@ -22,10 +22,10 @@
 npm install moleculer-connect
 ```
 
-For example, run below command to connect to a Moleculer broker with NATS:
+For example, run below command to connect to a Moleculer TypeScript project:
 
 ```sh
-moleculer-connect --env --config moleculer.config.ts NATS
+NODE_OPTIONS='--import tsx' moleculer-connect --env --config moleculer.config.ts
 ```
 
 ## Options
