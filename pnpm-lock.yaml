@@ -13,13 +13,13 @@ dependencies:
     version: 4.17.21
   moleculer:
     specifier: ^0.14.32
-    version: 0.14.32(nats@2.18.0)(pino@8.16.2)
+    version: 0.14.32(nats@2.19.0)(pino@8.16.2)
   moleculer-repl:
     specifier: 0.6.6
     version: 0.6.6
   nats:
     specifier: ^2.18.0
-    version: 2.18.0
+    version: 2.19.0
   pino:
     specifier: ^8.16.2
     version: 8.16.2
@@ -1698,7 +1698,7 @@ packages:
       tiny-human-time: 1.2.0
     dev: false
 
-  /moleculer@0.14.32(nats@2.18.0)(pino@8.16.2):
+  /moleculer@0.14.32(nats@2.19.0)(pino@8.16.2):
     resolution: {integrity: sha512-N5RXKS9Z01Gl6gLkf3snLgYbzU0bLci1WNEIuy2D+cjEg7i3XEArsiFHKnmNYWF6L5DajVrT8dw9EqGgvmjmOw==}
     engines: {node: '>= 10.x.x'}
     hasBin: true
@@ -1779,7 +1779,7 @@ packages:
       kleur: 4.1.5
       lodash: 4.17.21
       lru-cache: 6.0.0
-      nats: 2.18.0
+      nats: 2.19.0
       node-fetch: 2.7.0
       pino: 8.16.2
       recursive-watch: 1.1.4
@@ -1816,8 +1816,8 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /nats@2.18.0:
-    resolution: {integrity: sha512-zZF004ejzf67Za0Tva+xphxoxBMNc5IMLqbZ7Ho0j9TMuisjpo+qCd1EktXRCLNxmrZ8O6Tbm1dBsZYNF6yR1A==}
+  /nats@2.19.0:
+    resolution: {integrity: sha512-TuOAqPljCRpfHPo2o3midezchqYJUOOnK/YLmYf9rdoshzlYN1xvCd9dAKveVB6Bfubp/m63eN3l3ukfn43JOg==}
     engines: {node: '>= 14.0.0'}
     dependencies:
       nkeys.js: 1.0.5
