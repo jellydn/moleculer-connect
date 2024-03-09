@@ -41,20 +41,20 @@
     "lodash": "^4.17.21",
     "moleculer": "^0.14.32",
     "moleculer-repl": "0.6.6",
-    "nats": "^2.18.0",
-    "pino": "^8.16.2",
+    "nats": "^2.19.0",
+    "pino": "^8.19.0",
     "rimraf": "^5.0.5",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1",
-    "@types/node": "^20.10.0",
+    "@biomejs/biome": "1.6.0",
+    "@types/node": "^20.11.25",
     "@types/yargs": "^17.0.32",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "nano-staged": "^0.8.0",
-    "tsup": "^8.0.1",
-    "tsx": "^4.6.0",
-    "typescript": "^5.3.2"
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
   },
   "packageManager": "pnpm@8.12.0"
 }
