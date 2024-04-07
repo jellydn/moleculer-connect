@@ -40,12 +40,6 @@ devDependencies:
   '@types/yargs':
     specifier: ^17.0.32
     version: 17.0.32
-  husky:
-    specifier: ^9.0.11
-    version: 9.0.11
-  nano-staged:
-    specifier: ^0.8.0
-    version: 0.8.0
   tsup:
     specifier: ^8.0.2
     version: 8.0.2(typescript@5.4.4)
@@ -1444,12 +1438,6 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky@9.0.11:
-    resolution: {integrity: sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==}
-    engines: {node: '>=18'}
-    hasBin: true
-    dev: true
-
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -1838,14 +1826,6 @@ packages:
       thenify-all: 1.6.0
     dev: true
 
-  /nano-staged@0.8.0:
-    resolution: {integrity: sha512-QSEqPGTCJbkHU2yLvfY6huqYPjdBrOaTMKatO1F8nCSrkQGXeKwtCiCnsdxnuMhbg3DTVywKaeWLGCE5oJpq0g==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    hasBin: true
-    dependencies:
-      picocolors: 1.0.0
-    dev: true
-
   /nats@2.21.0:
     resolution: {integrity: sha512-sHXlOmcPsk/JWUcUvgQKCEhzUS9VsBdazYsIN/2eQv4WENuiHlJDMDxq+4HWTLOxfti05okvgeE7d6wMt5yHfQ==}
     engines: {node: '>= 14.0.0'}
@@ -1966,10 +1946,6 @@ packages:
   /path-type@4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
-    dev: true
-
-  /picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
     dev: true
 
   /picomatch@2.3.1:

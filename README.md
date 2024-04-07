@@ -46,6 +46,14 @@ Options:
                                                         [string] [default: null]
 ```
 
+## Pre-commit hooks
+
+This project uses [pre-commit](https://pre-commit.com/) to enforce code quality. To install the pre-commit hooks, run:
+
+```sh
+pre-commit install
+```
+
 ## Author
 
 👤 **Dung Huynh Duc <dung@productsway.com>**

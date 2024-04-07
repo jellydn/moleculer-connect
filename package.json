@@ -23,12 +23,7 @@
     "dev": "npx tsx ./src/cli.ts",
     "format": "biome format **/*.ts",
     "check": "biome check --apply .",
-    "install-husky": "npx husky install",
     "lint": "biome lint --apply **/*.ts"
-  },
-  "nano-staged": {
-    "*.{js,ts}": "biome format",
-    "*.js": "biome lint"
   },
   "dependencies": {
     "glob": "^10.3.12",
@@ -43,8 +38,6 @@
     "@biomejs/biome": "1.6.4",
     "@types/node": "^20.12.5",
     "@types/yargs": "^17.0.32",
-    "husky": "^9.0.11",
-    "nano-staged": "^0.8.0",
     "tsup": "^8.0.2",
     "tsx": "^4.7.2",
     "typescript": "^5.4.4"
