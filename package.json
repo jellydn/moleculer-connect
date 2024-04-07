@@ -1,6 +1,6 @@
 {
   "name": "moleculer-connect",
-  "version": "0.2.2-0",
+  "version": "0.2.2-1",
   "description": "Moleculer connect from CLI",
   "keywords": [
     "cli",
