@@ -16,13 +16,13 @@ importers:
         version: 4.17.21
       moleculer:
         specifier: ^0.14.33
-        version: 0.14.33(nats@2.21.0)(pino@8.20.0)
+        version: 0.14.33(debug@4.3.4)(nats@2.24.0)(pino@8.20.0)
       moleculer-repl:
         specifier: 0.6.6
         version: 0.6.6
       nats:
         specifier: ^2.21.0
-        version: 2.21.0
+        version: 2.24.0
       pino:
         specifier: ^8.20.0
         version: 8.20.0
@@ -1108,8 +1108,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nats@2.21.0:
-    resolution: {integrity: sha512-sHXlOmcPsk/JWUcUvgQKCEhzUS9VsBdazYsIN/2eQv4WENuiHlJDMDxq+4HWTLOxfti05okvgeE7d6wMt5yHfQ==}
+  nats@2.24.0:
+    resolution: {integrity: sha512-SX88qL6GdmbRG1dP/q2+YTDlY7i/u6Zz57J2JRLNb21QgQ+Vw46JzARmtNw83vlcW5XC53NXe5gRWo2D2gAFyg==}
     engines: {node: '>= 14.0.0'}
 
   next-tick@0.2.2:
@@ -2427,7 +2427,7 @@ snapshots:
       table: 6.8.1
       tiny-human-time: 1.2.0
 
-  moleculer@0.14.33(nats@2.21.0)(pino@8.20.0):
+  moleculer@0.14.33(debug@4.3.4)(nats@2.24.0)(pino@8.20.0):
     dependencies:
       args: 5.0.3
       eventemitter2: 6.4.9
@@ -2437,10 +2437,12 @@ snapshots:
       kleur: 4.1.5
       lodash: 4.17.21
       lru-cache: 6.0.0
-      nats: 2.21.0
       node-fetch: 2.7.0
-      pino: 8.20.0
       recursive-watch: 1.1.4
+    optionalDependencies:
+      debug: 4.3.4
+      nats: 2.24.0
+      pino: 8.20.0
     transitivePeerDependencies:
       - encoding
 
@@ -2456,7 +2458,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nats@2.21.0:
+  nats@2.24.0:
     dependencies:
       nkeys.js: 1.1.0
 
@@ -2798,6 +2800,7 @@ snapshots:
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
+    optionalDependencies:
       typescript: 5.4.4
     transitivePeerDependencies:
       - supports-color
