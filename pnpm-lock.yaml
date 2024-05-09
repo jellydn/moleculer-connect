@@ -10,13 +10,13 @@ importers:
     dependencies:
       glob:
         specifier: ^10.3.12
-        version: 10.3.12
+        version: 10.3.14
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
       moleculer:
         specifier: ^0.14.33
-        version: 0.14.33(nats@2.21.0)(pino@8.20.0)
+        version: 0.14.33(debug@4.3.4)(nats@2.21.0)(pino@8.20.0)
       moleculer-repl:
         specifier: 0.6.6
         version: 0.6.6
@@ -819,8 +819,8 @@ packages:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
 
-  glob@10.3.12:
-    resolution: {integrity: sha512-TCNv8vJ+xz4QiqTpfOJA7HvYv+tNIRHKfUWw/q+v2jdgN4ebz+KY9tGx5J4rHP0o84mNP+ApH66HRX8us3Khqg==}
+  glob@10.3.14:
+    resolution: {integrity: sha512-4fkAqu93xe9Mk7le9v0y3VrPDqLKHarNi2s4Pv7f2yOvfhWfhc7hRPHC/JyqMqb8B/Dt/eGS4n7ykwf3fOsl8g==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
 
@@ -971,8 +971,8 @@ packages:
     resolution: {integrity: sha512-ILKe88NeMt4gmDvk/eb615U/IVn7K9KWGkoYbdatQ69Z65nj1ZzjM6fHXfcs0Uge+e+EGnMW7DY4T9yko8vWFg==}
     engines: {node: '>=6'}
 
-  lru-cache@10.2.0:
-    resolution: {integrity: sha512-2bIM8x+VAf6JT4bKAljS1qUWgMsqZRPGJS6FSahIMPVvctcNhyVp7AJu7quxOW9jwkryBReKZY5tY5JYv2n/7Q==}
+  lru-cache@10.2.2:
+    resolution: {integrity: sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==}
     engines: {node: 14 || >=16.14}
 
   lru-cache@6.0.0:
@@ -1007,15 +1007,15 @@ packages:
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
-  minimatch@9.0.3:
-    resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
+  minimatch@9.0.4:
+    resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
-  minipass@7.0.4:
-    resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
+  minipass@7.1.1:
+    resolution: {integrity: sha512-UZ7eQ+h8ywIRAW1hIEl2AqdwzJucU/Kp59+8kkZeSvafXhZjul247BvIJjEVFVeON6d7lM46XX1HXCduKAS8VA==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   moleculer-repl@0.6.6:
@@ -1178,8 +1178,8 @@ packages:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
 
-  path-scurry@1.10.2:
-    resolution: {integrity: sha512-7xTavNy5RQXnsjANvVvMkEjvloOinkAjv/Z6Ildz9v2RinZ4SBKTWFOVRbaF8p0vpHnyjV/UwNDdKuUv6M5qcA==}
+  path-scurry@1.11.0:
+    resolution: {integrity: sha512-LNHTaVkzaYaLGlO+0u3rQTz7QrHTFOuKyba9JMTQutkmtNew8dw8wOD7mTU/5fCPZzCWpfW0XnQKzY61P0aTaw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   path-type@4.0.0:
@@ -2226,13 +2226,13 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob@10.3.12:
+  glob@10.3.14:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
-      minimatch: 9.0.3
-      minipass: 7.0.4
-      path-scurry: 1.10.2
+      minimatch: 9.0.4
+      minipass: 7.1.1
+      path-scurry: 1.11.0
 
   glob@7.1.6:
     dependencies:
@@ -2369,7 +2369,7 @@ snapshots:
       cli-cursor: 2.1.0
       wrap-ansi: 5.1.0
 
-  lru-cache@10.2.0: {}
+  lru-cache@10.2.2: {}
 
   lru-cache@6.0.0:
     dependencies:
@@ -2406,13 +2406,13 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.11
 
-  minimatch@9.0.3:
+  minimatch@9.0.4:
     dependencies:
       brace-expansion: 2.0.1
 
   minimist@1.2.8: {}
 
-  minipass@7.0.4: {}
+  minipass@7.1.1: {}
 
   moleculer-repl@0.6.6:
     dependencies:
@@ -2427,7 +2427,7 @@ snapshots:
       table: 6.8.1
       tiny-human-time: 1.2.0
 
-  moleculer@0.14.33(nats@2.21.0)(pino@8.20.0):
+  moleculer@0.14.33(debug@4.3.4)(nats@2.21.0)(pino@8.20.0):
     dependencies:
       args: 5.0.3
       eventemitter2: 6.4.9
@@ -2437,10 +2437,12 @@ snapshots:
       kleur: 4.1.5
       lodash: 4.17.21
       lru-cache: 6.0.0
-      nats: 2.21.0
       node-fetch: 2.7.0
-      pino: 8.20.0
       recursive-watch: 1.1.4
+    optionalDependencies:
+      debug: 4.3.4
+      nats: 2.21.0
+      pino: 8.20.0
     transitivePeerDependencies:
       - encoding
 
@@ -2516,10 +2518,10 @@ snapshots:
 
   path-key@3.1.1: {}
 
-  path-scurry@1.10.2:
+  path-scurry@1.11.0:
     dependencies:
-      lru-cache: 10.2.0
-      minipass: 7.0.4
+      lru-cache: 10.2.2
+      minipass: 7.1.1
 
   path-type@4.0.0: {}
 
@@ -2615,7 +2617,7 @@ snapshots:
 
   rimraf@5.0.5:
     dependencies:
-      glob: 10.3.12
+      glob: 10.3.14
 
   rollup@4.6.0:
     optionalDependencies:
@@ -2798,6 +2800,7 @@ snapshots:
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
+    optionalDependencies:
       typescript: 5.4.4
     transitivePeerDependencies:
       - supports-color
