@@ -16,7 +16,7 @@ importers:
         version: 4.17.21
       moleculer:
         specifier: ^0.14.33
-        version: 0.14.33(nats@2.21.0)(pino@8.20.0)
+        version: 0.14.33(debug@4.3.4)(nats@2.21.0)(pino@8.20.0)
       moleculer-repl:
         specifier: 0.6.6
         version: 0.6.6
@@ -28,7 +28,7 @@ importers:
         version: 8.20.0
       rimraf:
         specifier: ^5.0.5
-        version: 5.0.5
+        version: 5.0.6
       yargs:
         specifier: ^17.7.2
         version: 17.7.2
@@ -1290,8 +1290,8 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  rimraf@5.0.5:
-    resolution: {integrity: sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==}
+  rimraf@5.0.6:
+    resolution: {integrity: sha512-X72SgyOf+1lFnGM6gYcmZ4+jMOwuT4E4SajKQzUIlI7EoR5eFHMhS/wf8Ll0mN+w2bxcIVldrJQ6xT7HFQywjg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2427,7 +2427,7 @@ snapshots:
       table: 6.8.1
       tiny-human-time: 1.2.0
 
-  moleculer@0.14.33(nats@2.21.0)(pino@8.20.0):
+  moleculer@0.14.33(debug@4.3.4)(nats@2.21.0)(pino@8.20.0):
     dependencies:
       args: 5.0.3
       eventemitter2: 6.4.9
@@ -2437,10 +2437,12 @@ snapshots:
       kleur: 4.1.5
       lodash: 4.17.21
       lru-cache: 6.0.0
-      nats: 2.21.0
       node-fetch: 2.7.0
-      pino: 8.20.0
       recursive-watch: 1.1.4
+    optionalDependencies:
+      debug: 4.3.4
+      nats: 2.21.0
+      pino: 8.20.0
     transitivePeerDependencies:
       - encoding
 
@@ -2613,7 +2615,7 @@ snapshots:
 
   reusify@1.0.4: {}
 
-  rimraf@5.0.5:
+  rimraf@5.0.6:
     dependencies:
       glob: 10.3.12
 
@@ -2798,6 +2800,7 @@ snapshots:
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
+    optionalDependencies:
       typescript: 5.4.4
     transitivePeerDependencies:
       - supports-color
