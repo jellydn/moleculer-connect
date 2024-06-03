@@ -47,7 +47,7 @@ importers:
         version: 8.0.2(typescript@5.4.5)
       tsx:
         specifier: ^4.11.0
-        version: 4.11.0
+        version: 4.11.1
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -826,9 +826,11 @@ packages:
 
   glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
@@ -870,6 +872,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -1469,8 +1472,8 @@ packages:
       typescript:
         optional: true
 
-  tsx@4.11.0:
-    resolution: {integrity: sha512-vzGGELOgAupsNVssAmZjbUDfdm/pWP4R+Kg8TVdsonxbXk0bEpE1qh0yV6/QxUVXaVlNemgcPajGdJJ82n3stg==}
+  tsx@4.11.1:
+    resolution: {integrity: sha512-8ZmVC4OlQipEh3XBclB9YIih1XlNerBJ5NSwo5p76lIWIZdoSF+jFOVm9Gc/FQQ9554mZfxEEq9yTZfdghGYrw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -2806,7 +2809,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  tsx@4.11.0:
+  tsx@4.11.1:
     dependencies:
       esbuild: 0.20.2
       get-tsconfig: 4.7.5
