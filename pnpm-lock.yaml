@@ -16,13 +16,13 @@ importers:
         version: 4.17.21
       moleculer:
         specifier: ^0.14.33
-        version: 0.14.33(debug@4.3.4)(nats@2.26.0)(pino@9.1.0)
+        version: 0.14.33(debug@4.3.4)(nats@2.27.0)(pino@9.1.0)
       moleculer-repl:
         specifier: 0.6.6
         version: 0.6.6
       nats:
         specifier: ^2.26.0
-        version: 2.26.0
+        version: 2.27.0
       pino:
         specifier: ^9.1.0
         version: 9.1.0
@@ -1111,8 +1111,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nats@2.26.0:
-    resolution: {integrity: sha512-Inal+dsFpWtqZ5K/ea735yW162RMzKK6hg+5YXXvnXiF2BYxADGfuDsOTZsDLQkQHGV904Hp5fHB+t0P8qNDyg==}
+  nats@2.27.0:
+    resolution: {integrity: sha512-ebbcZE89YVHri2SHubJKAjNIgACGxMwAfdknFGQsOyLoLHXb8b35Tq9frl9p815Xskm1tjhjZ9hm6pNwL9pA7A==}
     engines: {node: '>= 14.0.0'}
 
   next-tick@0.2.2:
@@ -2430,7 +2430,7 @@ snapshots:
       table: 6.8.1
       tiny-human-time: 1.2.0
 
-  moleculer@0.14.33(debug@4.3.4)(nats@2.26.0)(pino@9.1.0):
+  moleculer@0.14.33(debug@4.3.4)(nats@2.27.0)(pino@9.1.0):
     dependencies:
       args: 5.0.3
       eventemitter2: 6.4.9
@@ -2444,7 +2444,7 @@ snapshots:
       recursive-watch: 1.1.4
     optionalDependencies:
       debug: 4.3.4
-      nats: 2.26.0
+      nats: 2.27.0
       pino: 9.1.0
     transitivePeerDependencies:
       - encoding
@@ -2461,7 +2461,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nats@2.26.0:
+  nats@2.27.0:
     dependencies:
       nkeys.js: 1.1.0
 
