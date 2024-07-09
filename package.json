@@ -31,7 +31,7 @@
     "moleculer": "^0.14.33",
     "nats": "^2.26.0",
     "pino": "^9.1.0",
-    "rimraf": "^5.0.7",
+    "rimraf": "^6.0.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
