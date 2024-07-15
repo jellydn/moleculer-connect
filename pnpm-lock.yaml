@@ -16,7 +16,7 @@ importers:
         version: 4.17.21
       moleculer:
         specifier: ^0.14.33
-        version: 0.14.33(debug@4.3.5)(nats@2.27.0)(pino@9.2.0)
+        version: 0.14.33(debug@4.3.5)(nats@2.27.0)(pino@9.3.0)
       moleculer-repl:
         specifier: 0.6.6
         version: 0.6.6
@@ -25,7 +25,7 @@ importers:
         version: 2.27.0
       pino:
         specifier: ^9.1.0
-        version: 9.2.0
+        version: 9.3.0
       rimraf:
         specifier: ^5.0.7
         version: 5.0.8
@@ -1227,8 +1227,8 @@ packages:
   pino-std-serializers@7.0.0:
     resolution: {integrity: sha512-e906FRY0+tV27iq4juKzSYPbUj2do2X2JX4EzSca1631EB2QJQUqGbDuERal7LCtOpxl6x3+nvo9NPZcmjkiFA==}
 
-  pino@9.2.0:
-    resolution: {integrity: sha512-g3/hpwfujK5a4oVbaefoJxezLzsDgLcNJeITvC6yrfwYeT9la+edCK42j5QpEQSQCZgTKapXvnQIdgZwvRaZug==}
+  pino@9.3.0:
+    resolution: {integrity: sha512-W9e1K47Gb8VJLn43j8lythxaKdzHG8tUPYvO8r1kWg7Z7ry/78UJeZ/1UA7ejumgvSPcJ9eBt4AN4gjJioDG7w==}
     hasBin: true
 
   pirates@4.0.6:
@@ -2469,7 +2469,7 @@ snapshots:
       table: 6.8.1
       tiny-human-time: 1.2.0
 
-  moleculer@0.14.33(debug@4.3.5)(nats@2.27.0)(pino@9.2.0):
+  moleculer@0.14.33(debug@4.3.5)(nats@2.27.0)(pino@9.3.0):
     dependencies:
       args: 5.0.3
       eventemitter2: 6.4.9
@@ -2484,7 +2484,7 @@ snapshots:
     optionalDependencies:
       debug: 4.3.5
       nats: 2.27.0
-      pino: 9.2.0
+      pino: 9.3.0
     transitivePeerDependencies:
       - encoding
 
@@ -2578,7 +2578,7 @@ snapshots:
 
   pino-std-serializers@7.0.0: {}
 
-  pino@9.2.0:
+  pino@9.3.0:
     dependencies:
       atomic-sleep: 1.0.0
       fast-redact: 3.5.0
