@@ -45,5 +45,5 @@
   "peerDependencies": {
     "moleculer-repl": "0.6.6"
   },
-  "packageManager": "pnpm@9.7.0"
+  "packageManager": "pnpm@9.15.0"
 }
