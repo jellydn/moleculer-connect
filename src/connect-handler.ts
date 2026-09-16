@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import * as glob from "glob";
 import Moleculer from "moleculer";
 import type { ArgumentsCamelCase } from "yargs";
@@ -61,10 +62,11 @@ export default async function handler(opts: ConnectArguments) {
         }
 
         const files = glob.sync(opts.commands);
-        files.forEach((file) => {
+        for (const file of files) {
             try {
                 logger.info(`Load custom REPL commands from '${file}'...`);
-                let cmd = require(path.resolve(file));
+                const importedModule = await import(pathToFileURL(path.resolve(file)).href);
+                let cmd = importedModule.default ?? importedModule;
                 cmd = cmd.default != null && cmd.__esModule ? cmd.default : cmd;
 
                 if (!Array.isArray(cmd)) cmd = [cmd];
@@ -73,7 +75,7 @@ export default async function handler(opts: ConnectArguments) {
             } catch (err) {
                 logger.error(err);
             }
-        });
+        }
         replCommands = commands;
     }
 

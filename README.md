@@ -48,6 +48,13 @@ Options:
                                                         [string] [default: null]
 ```
 
+Custom command files can use CommonJS (`module.exports`) or an ESM default export.
+Export one command object or an array of commands. `.js` files follow the nearest
+`package.json` module type; `.cjs` and `.mjs` select the format explicitly.
+Commands are added to existing `replOptions.customCommands` and legacy `replCommands`.
+
+Run `pnpm test` to build and test both CLI formats, including custom command execution.
+
 ## Pre-commit hooks
 
 This project uses [pre-commit](https://pre-commit.com/) to enforce code quality. To install the pre-commit hooks, run:
