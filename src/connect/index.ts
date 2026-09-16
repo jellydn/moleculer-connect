@@ -1,6 +1,6 @@
 import type { Argv } from "yargs";
 
-import connectHandler from "../connect-handler";
+import connectHandler, { type ConnectArguments } from "../connect-handler";
 import { logger } from "../logger";
 
 /**
@@ -51,7 +51,7 @@ const connectCommand = {
         });
     },
 
-    async handler(opts) {
+    async handler(opts: ConnectArguments) {
         logger.info("Connecting to remote broker...");
         logger.info(opts);
         const broker = await connectHandler(opts);

@@ -3,6 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import * as glob from "glob";
 import Moleculer from "moleculer";
+import type { ArgumentsCamelCase } from "yargs";
 
 import { logger } from "./logger";
 
@@ -10,6 +11,20 @@ type LegacyBrokerOptions = Moleculer.BrokerOptions & {
     replCommands?: unknown[];
     replDelimiter?: string;
 };
+
+export interface ConnectOptions {
+    commands?: string | null;
+    config?: string;
+    connectionString?: string;
+    hot?: boolean;
+    id?: string | null;
+    level?: string;
+    ns?: string;
+    serializer?: string | null;
+    transporter?: string;
+}
+
+export type ConnectArguments = ArgumentsCamelCase<ConnectOptions>;
 
 function applyCustomReplCommands(config: Moleculer.BrokerOptions, commands: unknown[]) {
     const existing = config.replOptions?.customCommands ?? [];
@@ -36,7 +51,7 @@ function applyCustomReplCommands(config: Moleculer.BrokerOptions, commands: unkn
  * @param {string} opts.commands Custom REPL command file mask (e.g.: ./commands/*.js)
  * @returns {import('moleculer').ServiceBroker}
  */
-export default async function handler(opts) {
+export default async function handler(opts: ConnectArguments) {
     let replCommands: unknown[] | undefined;
     if (opts.commands) {
         const commands: unknown[] = [];
@@ -70,15 +85,16 @@ export default async function handler(opts) {
 
     if (opts.level) {
         if (String(opts.level) === "silent") config.logger = false;
-        else config.logLevel = opts.level;
+        else config.logLevel = opts.level as Moleculer.BrokerOptions["logLevel"];
     }
 
     if (opts.ns) config.namespace = opts.ns;
 
-    if (opts.transporter) config.transporter = opts.transporter;
-    else if (opts.connectionString) config.transporter = opts.connectionString;
-    else if (process.env.TRANSPORTER) config.transporter = process.env.TRANSPORTER;
-    else if (config.nodeID === undefined && String(opts._[0]) === "connect") {
+    const transporter = opts.transporter || opts.connectionString || process.env.TRANSPORTER;
+    if (transporter) {
+        // Moleculer accepts connection URL strings at runtime, but its types omit them.
+        config.transporter = transporter as Moleculer.BrokerOptions["transporter"];
+    } else if (config.nodeID === undefined && String(opts._[0]) === "connect") {
         if (!config.transporter) {
             config.transporter = "TCP"; // TCP the default if no connection string
         }
@@ -88,7 +104,9 @@ export default async function handler(opts) {
     else if (config.nodeID === undefined)
         config.nodeID = `cli-${os.hostname().toLowerCase()}-${process.pid}`;
 
-    if (opts.serializer) config.serializer = opts.serializer;
+    if (opts.serializer) {
+        config.serializer = opts.serializer as Moleculer.BrokerOptions["serializer"];
+    }
 
     if (opts.hot) config.hotReload = opts.hot;
 

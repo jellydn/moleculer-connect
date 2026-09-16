@@ -1,6 +1,6 @@
 {
   "name": "moleculer-connect",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Moleculer connect from CLI",
   "keywords": ["cli", "moleculer", "microservices"],
   "homepage": "https://github.com/jellydn/moleculer-connect#readme",
@@ -23,7 +23,8 @@
     "dev": "npx tsx ./src/cli.ts",
     "format": "biome format **/*.ts",
     "check": "biome check --apply .",
-    "lint": "biome lint --apply **/*.ts"
+    "lint": "biome lint --apply **/*.ts",
+    "release": "bumpp"
   },
   "dependencies": {
     "glob": "^11.0.0",
@@ -38,6 +39,7 @@
     "@biomejs/biome": "1.9.4",
     "@types/node": "^22.1.0",
     "@types/yargs": "^17.0.33",
+    "bumpp": "^11.1.0",
     "tsup": "^8.2.4",
     "tsx": "^4.16.5",
     "typescript": "^5.5.4"
