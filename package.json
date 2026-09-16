@@ -37,7 +37,7 @@
     "yargs": "^18.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.13",
+    "@biomejs/biome": "2.5.14",
     "@types/node": "^22.1.0",
     "@types/yargs": "^17.0.33",
     "bumpp": "^12.0.0",
