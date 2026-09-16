@@ -20,6 +20,7 @@
   "files": ["dist", "src"],
   "scripts": {
     "build": "tsup",
+    "test": "pnpm build && node --test test/*.test.mjs",
     "dev": "npx tsx ./src/cli.ts",
     "format": "biome format **/*.ts",
     "check": "biome check --apply .",
