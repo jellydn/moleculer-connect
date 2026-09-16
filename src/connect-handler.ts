@@ -6,6 +6,19 @@ import Moleculer from "moleculer";
 
 import { logger } from "./logger";
 
+type LegacyBrokerOptions = Moleculer.BrokerOptions & {
+    replCommands?: unknown[];
+    replDelimiter?: string;
+};
+
+function applyCustomReplCommands(config: Moleculer.BrokerOptions, commands: unknown[]) {
+    const existing = config.replOptions?.customCommands ?? [];
+    config.replOptions = {
+        ...config.replOptions,
+        customCommands: [...existing, ...commands] as Moleculer.ReplOptions["customCommands"],
+    };
+}
+
 /**
  * Creates an instance of ServiceBroker
  *
@@ -24,9 +37,9 @@ import { logger } from "./logger";
  * @returns {import('moleculer').ServiceBroker}
  */
 export default async function handler(opts) {
-    let replCommands: unknown[];
+    let replCommands: unknown[] | undefined;
     if (opts.commands) {
-        replCommands = [];
+        const commands: unknown[] = [];
 
         if (opts.commands.endsWith("/")) {
             opts.commands += "**/*.*js";
@@ -41,16 +54,17 @@ export default async function handler(opts) {
 
                 if (!Array.isArray(cmd)) cmd = [cmd];
 
-                replCommands.push(...cmd);
+                commands.push(...cmd);
             } catch (err) {
                 logger.error(err);
             }
         });
+        replCommands = commands;
     }
 
     const configFile = process.env.MOLECULER_CONFIG || opts.config;
-    /** @type {import("moleculer").BrokerOptions} Service Broker config file*/
-    const config = (configFile ? await loadConfigFile(configFile) : null) || {};
+    const config: LegacyBrokerOptions =
+        (configFile ? await loadConfigFile(configFile) : null) || {};
 
     if (config.logger === undefined) config.logger = true;
 
@@ -78,7 +92,24 @@ export default async function handler(opts) {
 
     if (opts.hot) config.hotReload = opts.hot;
 
-    if (replCommands) config.replCommands = replCommands;
+    if (config.replCommands?.length) {
+        applyCustomReplCommands(config, config.replCommands);
+        config.replCommands = undefined;
+    }
+    if (config.replDelimiter) {
+        config.replOptions = {
+            ...config.replOptions,
+            delimiter: config.replOptions?.delimiter ?? config.replDelimiter,
+        };
+        config.replDelimiter = undefined;
+    }
+    if (replCommands) applyCustomReplCommands(config, replCommands);
+
+    // Protocol v5 (0.15) can still talk to v4 (0.14) clusters when version checks are off.
+    config.transit = {
+        ...config.transit,
+        disableVersionCheck: config.transit?.disableVersionCheck ?? true,
+    };
 
     const broker = new Moleculer.ServiceBroker(config);
 
