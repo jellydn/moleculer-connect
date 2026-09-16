@@ -18,8 +18,10 @@
 
 ## Usage
 
+Requires **Node.js 22+**. Moleculer 0.15 uses communication protocol v5; this CLI disables transporter version checks by default so it can still connect to 0.14 clusters. Set `transit.disableVersionCheck: false` in your broker config if you want strict 0.15-only connections.
+
 ```sh
-npm install moleculer-connect moleculer-repl@0.6.6
+npm install moleculer-connect moleculer-repl@0.8.0
 ```
 
 For example, run below command to connect to a Moleculer TypeScript project:
@@ -58,7 +60,7 @@ pre-commit install
 
 👤 **Dung Huynh Duc <dung@productsway.com>**
 
--   Github: [@jelydn](https://github.com/jelydn)
+- Github: [@jelydn](https://github.com/jelydn)
 
 ## Show your support
 
