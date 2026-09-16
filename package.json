@@ -2,7 +2,11 @@
   "name": "moleculer-connect",
   "version": "0.2.2",
   "description": "Moleculer connect from CLI",
-  "keywords": ["cli", "moleculer", "microservices"],
+  "keywords": [
+    "cli",
+    "moleculer",
+    "microservices"
+  ],
   "homepage": "https://github.com/jellydn/moleculer-connect#readme",
   "bugs": {
     "url": "https://github.com/jellydn/moleculer-connect/issues"
@@ -17,7 +21,10 @@
   "bin": {
     "moleculer-connect": "dist/cli.js"
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "npx tsx ./src/cli.ts",
@@ -32,7 +39,7 @@
     "nats": "^2.28.2",
     "pino": "^9.3.2",
     "rimraf": "^6.0.1",
-    "yargs": "^17.7.2"
+    "yargs": "^18.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
