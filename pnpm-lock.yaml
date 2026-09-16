@@ -16,13 +16,13 @@ importers:
         version: 4.18.1
       moleculer:
         specifier: ^0.14.34
-        version: 0.14.35(debug@4.4.0)(nats@2.28.2)(pino@9.5.0)
+        version: 0.14.35(debug@4.4.0)(nats@2.29.3)(pino@9.5.0)
       moleculer-repl:
         specifier: 0.6.6
         version: 0.6.6
       nats:
         specifier: ^2.28.2
-        version: 2.28.2
+        version: 2.29.3
       pino:
         specifier: ^9.3.2
         version: 9.5.0
@@ -1101,8 +1101,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nats@2.28.2:
-    resolution: {integrity: sha512-02cvR8EPach+0BfVaQjPgsbPFn6uMjEQAuvXS2ppg8jiWEm2KYdfmeFmtshiU9b2+kFh3LSEKMEaIfRgk3K8tw==}
+  nats@2.29.3:
+    resolution: {integrity: sha512-tOQCRCwC74DgBTk4pWZ9V45sk4d7peoE2njVprMRCBXrhJ5q5cYM7i6W+Uvw2qUrcfOSnuisrX7bEx3b3Wx4QA==}
     engines: {node: '>= 14.0.0'}
     deprecated: Package moved. Use @nats-io/transport-node from https://github.com/nats-io/nats.js
 
@@ -2354,7 +2354,7 @@ snapshots:
       table: 6.8.1
       tiny-human-time: 1.2.0
 
-  moleculer@0.14.35(debug@4.4.0)(nats@2.28.2)(pino@9.5.0):
+  moleculer@0.14.35(debug@4.4.0)(nats@2.29.3)(pino@9.5.0):
     dependencies:
       args: 5.0.3
       eventemitter2: 6.4.9
@@ -2368,7 +2368,7 @@ snapshots:
       recursive-watch: 1.1.4
     optionalDependencies:
       debug: 4.4.0
-      nats: 2.28.2
+      nats: 2.29.3
       pino: 9.5.0
     transitivePeerDependencies:
       - encoding
@@ -2385,7 +2385,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nats@2.28.2:
+  nats@2.29.3:
     dependencies:
       nkeys.js: 1.1.0
 
