@@ -13,7 +13,7 @@ importers:
         version: 11.0.0
       lodash:
         specifier: ^4.17.21
-        version: 4.17.21
+        version: 4.18.1
       moleculer:
         specifier: ^0.14.34
         version: 0.14.35(debug@4.4.0)(nats@2.28.2)(pino@9.5.0)
@@ -960,6 +960,9 @@ packages:
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -2317,6 +2320,8 @@ snapshots:
 
   lodash@4.17.21: {}
 
+  lodash@4.18.1: {}
+
   log-symbols@4.1.0:
     dependencies:
       chalk: 4.1.2
@@ -2399,7 +2404,7 @@ snapshots:
       glob: 7.2.3
       ipaddr.js: 2.2.0
       kleur: 4.1.5
-      lodash: 4.17.21
+      lodash: 4.18.1
       lru-cache: 6.0.0
       node-fetch: 2.7.0
       recursive-watch: 1.1.4
